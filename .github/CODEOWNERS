@@ -1,0 +1,7 @@
+# CODEOWNERS configuration
+# This file defines required reviewers for Pull Requests targeting this branch (develop).
+# Rules are branch-specific: place a CODEOWNERS file in each branch to control its own requirements.
+# Note: when multiple patterns match, the LAST matching rule takes precedence.
+
+# All files require review from both owners
+* @lbetagu
