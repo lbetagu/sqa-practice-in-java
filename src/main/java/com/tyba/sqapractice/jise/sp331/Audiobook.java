@@ -54,7 +54,7 @@ public class Audiobook extends AudioTrack implements INavigation {
     }
 
     @Override
-    public void changeSpeed(int speed) {
+    public void changeSpeed(double speed) {
         System.out.println("Changing speed of audiobook: " + getTitle() + " to " + speed);
     }
 }

@@ -44,7 +44,7 @@ public class Podcast extends AudioTrack implements INavigation {
     }
 
     @Override
-    public void changeSpeed(int speed) {
+    public void changeSpeed(double speed) {
         System.out.println("Changing speed of podcast: " + getTitle() + " to " + speed);
     }
 
