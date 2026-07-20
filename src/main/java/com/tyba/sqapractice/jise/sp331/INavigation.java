@@ -6,7 +6,7 @@ public interface INavigation {
 
     public void backFifteenSeconds();
 
-    public void jumpToTrack(int trackNumber);
+    public void jumpToTrack(int chapterNumber);
 
-    public void changeSpeed(int speed);
+    public void changeSpeed(double speed);
 }

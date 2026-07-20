@@ -1,5 +1,6 @@
 package com.tyba.sqapractice.jise.sp331;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Playlist {
@@ -12,7 +13,7 @@ public class Playlist {
         this.name = name;
         this.owner = owner;
         this.description = description;
-        this.tracks = tracks;
+        this.tracks = new ArrayList<>(tracks);
     }
 
     public String getName() {

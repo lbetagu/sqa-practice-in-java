@@ -2,9 +2,9 @@ package com.tyba.sqapractice.jise.sp331;
 
 public abstract class AudioTrack {
 
-    protected String title;
-    protected int duration;
-    protected String genre;
+    private String title;
+    private int duration;
+    private String genre;
 
     protected AudioTrack(String title, int duration, String genre) {
         this.title = title;
@@ -36,8 +36,8 @@ public abstract class AudioTrack {
         this.genre = genre;
     }
 
-    protected abstract void play();
+    public abstract void play();
 
-    protected abstract void pause();
+    public abstract void pause();
 
 }
