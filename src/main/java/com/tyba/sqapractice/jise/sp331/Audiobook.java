@@ -28,7 +28,9 @@ public class Audiobook extends AudioTrack implements INavigation {
 
     @Override
     public void play() {
-        System.out.println("Playing audiobook: " + getTitle());
+        System.out.println(
+                "Playing audiobook: " + getTitle() + " - " + getNarrator() + " - Genre: " + getGenre() + " - Duration: "
+                        + getDuration() + " seconds");
     }
 
     @Override

@@ -18,7 +18,9 @@ public class Podcast extends AudioTrack implements INavigation {
 
     @Override
     public void play() {
-        System.out.println("Playing podcast: " + getTitle());
+        System.out.println(
+                "Playing podcast: " + getTitle() + " - " + getHost() + " - Genre: " + getGenre() + " - Duration: "
+                        + getDuration() + " seconds");
     }
 
     @Override

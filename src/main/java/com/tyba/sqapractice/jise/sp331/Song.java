@@ -19,7 +19,9 @@ public class Song extends AudioTrack {
 
     @Override
     public void play() {
-        System.out.println("Playing song: " + getTitle());
+        System.out.println(
+                "Playing song: " + getTitle() + " - " + getArtist() + " - Genre: " + getGenre() + " - Duration: "
+                        + getDuration() + " seconds");
     }
 
     @Override
