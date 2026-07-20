@@ -1,27 +1,12 @@
 package com.tyba.sqapractice.jise.sp331;
 
-public class Song {
-    private String name;
+public class Song extends AudioTrack {
+
     private String artist;
-    private int duration;
-    private String genre;
 
-    public Song() {
-    }
-
-    public Song(String name, String artist, int duration, String genre) {
-        this.name = name;
+    public Song(String title, int duration, String genre, String artist) {
+        super(title, duration, genre);
         this.artist = artist;
-        this.duration = duration;
-        this.genre = genre;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getArtist() {
@@ -32,20 +17,14 @@ public class Song {
         this.artist = artist;
     }
 
-    public int getDuration() {
-        return duration;
+    @Override
+    public void play() {
+        System.out.println("Playing song: " + getTitle());
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
+    @Override
+    public void pause() {
+        System.out.println("Pausing song: " + getTitle());
     }
 
 }

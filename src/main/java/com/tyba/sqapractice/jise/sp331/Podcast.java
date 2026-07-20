@@ -1,27 +1,11 @@
 package com.tyba.sqapractice.jise.sp331;
 
-public class Podcast {
-    private String title;
+public class Podcast extends AudioTrack implements INavigation {
     private String host;
-    private int duration;
-    private String genre;
 
-    public Podcast() {
-    }
-
-    public Podcast(String title, String host, int duration, String genre) {
-        this.title = title;
+    public Podcast(String title, int duration, String genre, String host) {
+        super(title, duration, genre);
         this.host = host;
-        this.duration = duration;
-        this.genre = genre;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getHost() {
@@ -32,20 +16,34 @@ public class Podcast {
         this.host = host;
     }
 
-    public int getDuration() {
-        return duration;
+    @Override
+    public void play() {
+        System.out.println("Playing podcast: " + getTitle());
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    @Override
+    public void pause() {
+        System.out.println("Pausing podcast: " + getTitle());
     }
 
-    public String getGenre() {
-        return genre;
+    @Override
+    public void forwardFifteenSeconds() {
+        System.out.println("Forwarding podcast: " + getTitle());
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
+    @Override
+    public void backFifteenSeconds() {
+        System.out.println("Backing podcast: " + getTitle());
+    }
+
+    @Override
+    public void jumpToTrack(int trackNumber) {
+        System.out.println("Jumping to track: " + getTitle() + " " + trackNumber);
+    }
+
+    @Override
+    public void changeSpeed(int speed) {
+        System.out.println("Changing speed of podcast: " + getTitle() + " to " + speed);
     }
 
 }
