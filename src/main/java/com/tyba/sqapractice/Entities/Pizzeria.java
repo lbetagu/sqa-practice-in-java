@@ -1,26 +1,26 @@
 package com.tyba.sqapractice.Entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pizzeria {
     
     public static void main(String[] args) {
         
-        System.out.println("--- Abriendo la Pizzería ---");
+        // Creamos una lista que acepta objetos de tipo Padre (Pizza)
+        List<Pizza> ordenesDelDia = new ArrayList<>();
 
-        // Objeto 1: Creamos una pizza pequeña
-        Pizza pizzaPersonal = new Pizza("Pequeña", "Delgada", 4);
-        
-        // Objeto 2: Creamos una pizza grande con bordes de queso
-        Pizza pizzaFamiliar = new Pizza("Familiar", "Bordes de queso", 10);
+        // ¡ POLIMORFISMO EN ACCIÓN ! 
+        // Podemos meter objetos Hijo dentro de una variable de tipo Padre
+        ordenesDelDia.add(new Pizza("Pequeña", "Delgada",6));             // Pizza normal
+        ordenesDelDia.add(new PizzaHawaiana("Mediana", "Delgada",8,true));     // Hijo 
 
-        // Interactuando con el Objeto 1
-        System.out.println("\n-- Pedido de la mesa 1 --");
-        pizzaPersonal.servir(); // Intentamos servirla cruda (dará error lógico)
-        pizzaPersonal.hornear(); // La metemos al horno
-        pizzaPersonal.servir();  // Ahora sí la servimos
+        System.out.println("--- Encendiendo el horno del restaurante ---");
 
-        // Interactuando con el Objeto 2
-        System.out.println("\n-- Pedido de la mesa 2 --");
-        pizzaFamiliar.hornear(); 
-
+        // Recorremos la lista y le decimos a cada pizza que se hornee.
+        // Fíjate que el código solo dice "pizza.hornear()", pero cada una lo hará a su modo:
+        for (Pizza pizza : ordenesDelDia) {
+            pizza.hornear();
+        }
     }
 }
