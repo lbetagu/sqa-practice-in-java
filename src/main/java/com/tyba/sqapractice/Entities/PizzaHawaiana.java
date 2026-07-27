@@ -21,4 +21,9 @@ public class PizzaHawaiana extends Pizza {
         System.out.println("🔥 Pizza Hawaiana, horneando a fuego lento para caramelizar la piña.");
     }
 
+    @Override
+    public void prepararIngredientes() {
+        System.out.println("🍕 [Receta]: Estirando masa " + tipoMasa + " y poniendo 20 rodajas de piña.");
+    }
+
 }

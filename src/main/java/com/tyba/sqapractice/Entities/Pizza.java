@@ -1,6 +1,6 @@
 package com.tyba.sqapractice.Entities;
 
-public class Pizza {
+public abstract class Pizza {
     String tamaño;
     String tipoMasa;
     int cantidadPorciones;
@@ -17,4 +17,6 @@ public class Pizza {
         this.estaHorneada = true;
         System.out.println("🔥 Horneando pizza básica de masa " + this.tipoMasa + " de " + this.cantidadPorciones +" porciones.");
     }
+
+    public abstract void prepararIngredientes();
 }
