@@ -2,17 +2,21 @@ package com.tyba.sqapractice.Entities;
 
 public class PizzaPepperoni extends Pizza implements Empacable{
     
-    int adicionPimiento; // Atributo exclusivo de esta pizza
+    private boolean adicionPimiento; // Atributo exclusivo de esta pizza
 
     public PizzaPepperoni(String tamaño, String tipoMasa, int cantidadPorciones) {
         // La palabra 'super' llama al constructor del Padre (Pizza)
-        super(tamaño, tipoMasa, cantidadPorciones); 
-        this.adicionPimiento = adicionPimiento;
+        super(tamaño, tipoMasa, cantidadPorciones, 38.000); 
+        this.adicionPimiento = false;
     }
 
     // Método exclusivo de este hijo
     public void agregarPimiento() {
-        System.out.println("🍕 Agregando " + this.adicionPimiento + " a la pizza de pepperoni.");
+        if(!this.adicionPimiento)
+        {
+            this.adicionPimiento = true;
+                    System.out.println("🍕 Agregando " + this.adicionPimiento + " a la pizza de pepperoni.");
+        }
     }
 
     @Override

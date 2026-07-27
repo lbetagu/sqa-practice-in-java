@@ -5,7 +5,7 @@ public class PizzaHawaiana extends Pizza {
     boolean conPiña; // atributo exclusivo
 
     public PizzaHawaiana(String tamaño, String tipoMasa, int cantidadPorciones, boolean conPiña) {
-        super(tamaño, tipoMasa, cantidadPorciones);
+        super(tamaño, tipoMasa, cantidadPorciones, 45.000);
         this.conPiña = conPiña;
     }
     
@@ -23,7 +23,7 @@ public class PizzaHawaiana extends Pizza {
 
     @Override
     public void prepararIngredientes() {
-        System.out.println("🍕 [Receta]: Estirando masa " + tipoMasa + " y poniendo 20 rodajas de piña.");
+        System.out.println("🍕 [Receta]: Estirando masa " + tipoMasa + " y poniendo 20 trocitos de piña.");
     }
 
 }
