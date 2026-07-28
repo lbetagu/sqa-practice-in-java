@@ -2,9 +2,9 @@ package com.tyba.sqapractice.Test;
 
 import org.junit.jupiter.api.Test;
 
-import com.tyba.sqapractice.Entities.Pizzeria;
+import com.tyba.sqapractice.Entities.PizzaTradicional.PizzeriaTradicional;
 
-public class PizzeriaTest {
+public class PizzeriaTradicionalTest {
 
     @Test
     public void ejecutarRutinaDeLaPizzeria() {
@@ -15,7 +15,7 @@ public class PizzeriaTest {
         String[] argumentosVacios = {}; 
         
         // Llamamos a la clase y a su método directamente
-        Pizzeria.main(argumentosVacios);
+        PizzeriaTradicional.main(argumentosVacios);
         
         System.out.println("Test finalizado.");
     }

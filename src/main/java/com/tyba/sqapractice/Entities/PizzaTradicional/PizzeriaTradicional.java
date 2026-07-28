@@ -1,9 +1,9 @@
-package com.tyba.sqapractice.Entities;
+package com.tyba.sqapractice.Entities.PizzaTradicional;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pizzeria {
+public class PizzeriaTradicional {
     
     public static void main(String[] args) {
         

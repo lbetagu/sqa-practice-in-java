@@ -1,4 +1,4 @@
-package com.tyba.sqapractice.Entities;
+package com.tyba.sqapractice.Entities.PizzaTradicional;
 
 public class PizzaPepperoni extends Pizza implements Empacable{
     
