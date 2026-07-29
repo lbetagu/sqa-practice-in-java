@@ -3,12 +3,18 @@
  */
 package com.tyba.sqapractice;
 
+import com.tyba.sqapractice.oop.interfaces.UltraRobot;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
+
+
     public static void main(String[] args) {
+        UltraRobot ultraRobot = new UltraRobot("Andrea", 10);
+        ultraRobot.recharge();
         System.out.println(new App().getGreeting());
     }
 }
