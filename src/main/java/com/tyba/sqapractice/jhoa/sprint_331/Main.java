@@ -7,5 +7,10 @@ public class Main {
 
         Moto miMoto = new Moto("Yamaha", "NMAX");
         miMoto.mostrarInfo();
+
+        miCarro.moverse();
+        miCarro.conducir();
+        miMoto.moverse();
+
     }
 }
