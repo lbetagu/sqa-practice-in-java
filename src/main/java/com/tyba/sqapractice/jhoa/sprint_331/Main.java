@@ -2,7 +2,7 @@ package com.tyba.sqapractice.jhoa.sprint_331;
 
 public class Main {
     public static void main(String[] args) {
-        Carro miCarro = new Carro("Mazda", "2");
+        Carro miCarro = new Carro("Mazda", "2", "Gasolina", 1500);
         miCarro.mostrarInfo();
 
         Moto miMoto = new Moto("Yamaha", "NMAX");
